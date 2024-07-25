@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="1" thread-count="1">
+
+    <test name="KSATest" parallel="none">
+        <parameter name="url" value="https://subscribe.stctv.com/sa-en" />
+        <parameter name="expectedLitePrice" value="15 SAR/month" />
+        <parameter name="expectedClassicPrice" value="25 SAR/month" />
+        <parameter name="expectedPremiumPrice" value="60 SAR/month" />
+        <classes>
+            <class name="STCTest"/>
+        </classes>
+    </test>
+
+    <test name="KuwaitTest" parallel="none">
+        <parameter name="url" value="https://subscribe.stctv.com/kw-en" />
+        <parameter name="expectedLitePrice" value="1.2 KWD/month" />
+        <parameter name="expectedClassicPrice" value="2.5 KWD/month" />
+        <parameter name="expectedPremiumPrice" value="4.8 KWD/month" />
+        <classes>
+            <class name="STCTest"/>
+        </classes>
+    </test>
+
+
+    <test name="BahrainTest" parallel="none">
+    <parameter name="url" value="https://subscribe.stctv.com/bh-en" />
+    <parameter name="expectedLitePrice" value="2 BHD/month" />
+    <parameter name="expectedClassicPrice" value="3 BHD/month" />
+    <parameter name="expectedPremiumPrice" value="6 BHD/month" />
+    <classes>
+        <class name="STCTest"/>
+    </classes>
+</test>
+
+
+
+</suite>
